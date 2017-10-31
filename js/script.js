@@ -1,5 +1,15 @@
 var arrayCategory = ["interior", "menswear", "womenswear", "print", "jewerly"];
 
+<<<<<<< Updated upstream
+=======
+
+
+$('.burger-menu').on('click', function() {
+  $(this).toggleClass("burger-menu--opened");
+  $(this).toggleClass("burger-menu--closed");
+});
+
+>>>>>>> Stashed changes
 $(".filter li").click(filter);
 
 function filter(){
@@ -12,5 +22,8 @@ function filter(){
         }
     });
 }
+<<<<<<< Updated upstream
     
     
+=======
+>>>>>>> Stashed changes

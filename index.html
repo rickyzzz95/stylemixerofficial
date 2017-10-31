@@ -10,6 +10,7 @@
     <meta name="keywords" content="css animation, loading effect, google plus, grid items, masonry" />
     <meta name="author" content="Codrops" />
     <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/reset.min.css" />
     <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
@@ -23,9 +24,16 @@
 
         <div class="containerBrands">
             <p class="logo">Style Mixer</p>
-            <div class="menuArea"><img src="images/menu.png" alt=""></div>
+            <div class="menuArea">
+              <div class="burger-menu burger-menu--closed">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+              </div>
+            </div>
             <div class="clients">
                 <ul class="filter">
+                    <li data-filter="all">MIXER</li>
                     <li data-filter="interior">INTERIOR, LIFESTYLE AND SET DESIGN</li>
                     <li data-filter="menswear">MENSWEAR</li>
                     <li data-filter="womenswear">WOMENSWEAR</li>
@@ -40,7 +48,7 @@
         </div>
 
         <div class="containerGallery">
-            <a class="arrowTop" href="#grid"></a>
+            <a class="arrowTop" href="#grid"><img src="images/backcopy.svg" width="15px" alt=""></a>
             <ul class="grid effect-2" id="grid">
                 <li class="item" data-filter="jewerly" id="img1">
                     <a href="images/1.jpg" data-fancybox>
@@ -57,8 +65,9 @@
                         <figure><img src="images/4.jpg"></figure>
                     </a>
                 </li>
-                <li class="item" data-filter="print"><video muted controls loop autoplay>
-						<source src="images/video2.mp4" type="video/mp4">
+
+                <li class="item" data-filter="print"><video muted loop autoplay>
+						<source src="images/video.mp4" type="video/mp4">
 					</video></li>
                 <li class="item" data-filter="design">
                     <a href="images/13.jpg" data-fancybox>
@@ -70,15 +79,14 @@
                         <figure><img src="images/2.jpg"></figure>
                     </a>
                 </li>
-                <li class="item" data-filter="print"><video muted controls loop autoplay>
-						<source src="images/video.mp4" type="video/mp4">
-					</video></li>
+                <li id="" class="item" data-filter="print"><a href="images/13.jpg" data-fancybox>
+                    <figure><img src="images/13.jpg"></figure>
+                </a></li>
                 <li class="item" data-filter="interior">
-                    <a href="images/5.jpg" data-fancybox>
-                        <figure>
-                            <img src="images/5.jpg">
-                        </figure>
-                    </a>
+                  <video muted loop autoplay>
+                  <source src="images/video2.mp4" type="video/mp4">
+                </video>
+
                 </li>
                 <li class="item" data-filter="menswear">
                     <a href="images/6.jpg" data-fancybox>
@@ -211,12 +219,19 @@
             </div>
         </div>
     </div>
+    <script type="js/script.js"></script>
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/masonry-3.1.4.js"></script>
     <script src="js/imagesloaded.js"></script>
     <script src="js/masonry.filter.js"></script>
     <script src="js/jquery.fancybox.js"></script>
+    </script>
     <script>
+        $('.burger-menu').on('click', function() {
+          $(this).toggleClass("burger-menu--opened");
+          $(this).toggleClass("burger-menu--closed");
+        });
+
         $(function() {
             var self = $("#grid");
 
