@@ -20,41 +20,41 @@
 
 <body>
 
-    <div class="container">
-
-        <div class="containerBrands">
-            <p class="logo">Style Mixer</p>
-            <div class="menuArea">
-              <div class="burger-menu burger-menu--closed">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-              </div>
+    <div class="container-fluid">
+      <div class="containerBrands">
+        <header>
+          <p class="logo">Style Mixer</p>
+          <div class="menuArea">
+            <div class="burger-menu burger-menu--closed">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
             </div>
-            <div class="clients">
-                <ul class="filter">
-                    <li data-filter="all">MIXER</li>
-                    <li data-filter="interior">INTERIOR, LIFESTYLE AND SET DESIGN</li>
-                    <li data-filter="menswear">MENSWEAR</li>
-                    <li data-filter="womenswear">WOMENSWEAR</li>
-                    <li data-filter="jewerly" class="selected">JEWELRY, WATCHES LEATHER GOODS AND ACCESSORIES</li>
-                    <li data-filter="print">PRINT</li>
-                </ul>
-            </div>
-            <div class="copy">
-                <p>©Credits: Mr Studio</p>
-            </div>
-
+          </div>
+        </header>
+        <div class="clients">
+          <ul class="filter">
+            <li data-filter="all">MIXER</li>
+            <li data-filter="interior">INTERIOR, LIFESTYLE AND SET DESIGN</li>
+            <li data-filter="menswear">MENSWEAR</li>
+            <li data-filter="womenswear">WOMENSWEAR</li>
+            <li data-filter="jewerly" class="selected">JEWELRY, WATCHES LEATHER GOODS AND ACCESSORIES</li>
+            <li data-filter="print">PRINT</li>
+          </ul>
         </div>
+        <div class="copy">
+          <p>©Credits: Mr Studio</p>
+        </div>
+      </div>
 
-        <div class="containerGallery">
-            <a class="arrowTop" href="#grid"><img src="images/backcopy.svg" width="15px" alt=""></a>
-            <ul class="grid effect-2" id="grid">
-                <li class="item" data-filter="jewerly" id="img1">
-                    <a href="images/1.jpg" data-fancybox>
-                        <figure><img src="images/1.jpg"></figure>
-                    </a>
-                </li>
+    <div class="containerGallery">
+      <a class="arrowTop" href="#grid"></a>
+        <ul class="grid effect-2" id="grid">
+          <li class="item" data-filter="jewerly" id="img1">
+            <a href="images/1.jpg" data-fancybox>
+              <figure><img src="images/1.jpg"></figure>
+            </a>
+          </li>
                 <li class="item" data-filter="womenswear" id="img2">
                     <a href="images/3.jpg" data-fancybox>
                         <figure><img src="images/3.jpg"></figure>
@@ -219,6 +219,11 @@
             </div>
         </div>
     </div>
+
+
+
+
+
     <script type="js/script.js"></script>
     <script src="js/jquery-2.2.0.min.js"></script>
     <script src="js/masonry-3.1.4.js"></script>

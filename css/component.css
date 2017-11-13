@@ -94,6 +94,12 @@ body .burger-menu--opened .bar:nth-of-type(3) {
 #video{
 	padding-bottom: 8px;
 }
+
+.navBar{
+	height: auto;
+	width: 100vw;
+}
+
 .logo{
 	color: #000;
 	font-size: 14pt;
@@ -102,6 +108,7 @@ body .burger-menu--opened .bar:nth-of-type(3) {
 	font-family: 'HelveticaNeue';
 	float: left;
 }
+
 .containerBrands{
 	height: 100vh;
 	position: fixed;
@@ -199,30 +206,64 @@ clients li:selected{
 }
 
 .arrowTop{
+	background-image: url(../images/arrowUp.png);
+	background-position: center;
+	background-size: contain;
 	height: 50px;
 	width: 50px;
-	background-color: #fff;
-	padding-right: 3px;
 	right: 30px;
-	/*
-	-webkit-box-shadow: 0px 10px 113px -7px rgba(0,0,0,0.43);
-	-moz-box-shadow: 0px 10px 113px -7px rgba(0,0,0,0.43);
-	box-shadow: 0px 10px 113px -7px rgba(0,0,0,0.43);
-	*/
-	border: 0.5px solid #E6E6E6;
 	position: fixed;
 	bottom: 15px;
 	z-index: 1000;
 	text-align: center;
+	border: 1px solid #E6E6E6;
 }
 
-.arrowTop img{
-	text-align: center;
-	padding-top: 20px;
-}
 
 
 /* fine modifiche*/
+
+
+/* Media query*/
+
+@media only screen and (max-width : 768px) {
+
+	.logo{
+		margin-top: 35px;
+	}
+
+	.menuArea{
+		margin-top: 35px;
+	}
+
+	.containerBrands{
+		width: 100vw;
+		height: auto;
+	}
+
+	.clients{
+		text-align: center;
+		margin-top: 20vh;
+		margin-left: 0px;
+	}
+
+	.copy{
+		display: none;
+	}
+
+	.containerGallery{
+		height: auto;
+		width: 100vw;
+		float: none;
+		padding: 0px;
+		padding-left: 4px;
+		padding-right: 4px;
+		padding-top: 0px;
+	}
+
+}
+
+/*Fine Media query*/
 
 .grid li.shown,
 .no-js .grid li,
