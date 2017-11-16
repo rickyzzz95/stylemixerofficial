@@ -91,6 +91,14 @@ body .burger-menu--opened .bar:nth-of-type(3) {
 }
 
 /* modifiche*/
+
+header{
+	top: 0px;
+	height: 100px;
+	width: 35vw;
+	position: fixed;
+}
+
 #video{
 	padding-bottom: 8px;
 }
@@ -144,7 +152,7 @@ body .burger-menu--opened .bar:nth-of-type(3) {
 	font-size: 10pt;
 }
 
-clients li:selected{
+.clients li:selected{
 	opacity: 0;
 }
 
@@ -228,6 +236,15 @@ clients li:selected{
 
 @media only screen and (max-width : 768px) {
 
+	header{
+		top: 0px;
+		height: 90px;
+		width: 100vw;
+		position: fixed;
+		background-color: #fff;
+		z-index: 10000;
+	}
+
 	.logo{
 		margin-top: 35px;
 	}
@@ -238,12 +255,16 @@ clients li:selected{
 
 	.containerBrands{
 		width: 100vw;
+		margin-top: 100px;
 		height: auto;
+		position: relative;
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 
 	.clients{
 		text-align: center;
-		margin-top: 20vh;
+		margin-top: 0px;
 		margin-left: 0px;
 	}
 

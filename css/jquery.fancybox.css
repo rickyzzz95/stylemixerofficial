@@ -25,6 +25,13 @@
   -webkit-transform: translateZ(0);
   transform: translateZ(0); }
 
+@media only screen and (max-width : 768px) {
+
+  .fancybox-container{
+    width: 100vw;
+  }
+
+}
 /* Make sure that the first one is on the top */
 .fancybox-container ~ .fancybox-container {
   z-index: 99992; }
@@ -619,6 +626,7 @@
   .fancybox-caption {
     padding: 20px 0;
     margin: 0; } }
+
 
 /* Fullscreen  */
 .fancybox-button--fullscreen::before {
