@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading Effects for Grid Items | Demo 2</title>
+    <title>Style Mixer</title>
     <meta name="description" content="Loading Effects for Grid Items with CSS Animations" />
     <meta name="keywords" content="css animation, loading effect, google plus, grid items, masonry" />
     <meta name="author" content="Codrops" />
@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="css/default.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
-    <script src="js/modernizr.custom.js"></script>
 </head>
 
 <body>
@@ -34,11 +33,11 @@
         </header>
         <div class="clients">
           <ul class="filter">
-            <li data-filter="all">MIXER</li>
+            <li class="selected" data-filter>MIXER</li>
             <li data-filter="interior">INTERIOR, LIFESTYLE AND SET DESIGN</li>
             <li data-filter="menswear">MENSWEAR</li>
             <li data-filter="womenswear">WOMENSWEAR</li>
-            <li data-filter="jewerly" class="selected">JEWELRY, WATCHES LEATHER GOODS AND ACCESSORIES</li>
+            <li data-filter="jewerly">JEWELRY, WATCHES LEATHER GOODS AND ACCESSORIES</li>
             <li data-filter="print">PRINT</li>
           </ul>
         </div>
@@ -215,67 +214,18 @@
                 </li>
             </ul>
             <div class="nextProject">
-                <p>Next Category</p>
+                <p data-filter="interior">Next Category</p>
             </div>
         </div>
     </div>
 
-
-
-
-
-    <script type="js/script.js"></script>
     <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
     <script src="js/masonry-3.1.4.js"></script>
     <script src="js/imagesloaded.js"></script>
     <script src="js/masonry.filter.js"></script>
     <script src="js/jquery.fancybox.js"></script>
-    </script>
-    <script>
-        $('.burger-menu').on('click', function() {
-          $(this).toggleClass("burger-menu--opened");
-          $(this).toggleClass("burger-menu--closed");
-        });
-
-        $(function() {
-            var self = $("#grid");
-
-            self.imagesLoaded(function() {
-                self.masonry({
-                    gutterWidth: 15,
-                    isAnimated: true,
-                    itemSelector: ".item"
-                });
-            });
-
-            $(".filter li").click(function(e) {
-                e.preventDefault();
-                var filter = $(this).attr("data-filter");
-
-                self.masonryFilter({
-                    filter: function() {
-                        if (!filter) return true;
-                        return $(this).attr("data-filter") == filter;
-                    }
-                });
-            });
-
-            $(".arrowTop").on('click', function(event) {
-                if (this.hash !== "") {
-                    event.preventDefault();
-                    var hash = this.hash;
-
-                    $('html, body').animate({
-                        scrollTop: $(hash).offset().top
-                    }, 800, function() {
-
-                        window.location.hash = hash;
-                    });
-                }
-            });
-        });
-
-    </script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

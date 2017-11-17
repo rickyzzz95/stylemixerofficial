@@ -4408,7 +4408,7 @@
 
 		},
 		toggle : function ( elem ) {
-
+            $(".fancybox-container").toggleClass("fullscreen");
 			elem = elem || document.documentElement;
 
 			if ( this.isFullscreen() ) {
@@ -4420,12 +4420,12 @@
 
 		},
 		isFullscreen : function()  {
-
+            
 			return Boolean( document[ fn.fullscreenElement ] );
 
 		},
 		enabled : function()  {
-
+            
 			return Boolean( document[ fn.fullscreenEnabled ] );
 
 		}

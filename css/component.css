@@ -13,11 +13,6 @@
 	width: 33%;
 }
 
-.fancybox-button{
-	color: #000 !important;
-	background-color: #fff !important;
-}
-
 body .burger-menu {
   margin: 0 auto;
   width: 30px;
@@ -131,6 +126,10 @@ header{
 	float: right;
 	padding-left: 8px;
 	padding-top:8px;
+    transition: 0.2s all ease;
+}
+.fullscreen{
+    width: 100% !important;
 }
 
 .clients{
@@ -142,14 +141,17 @@ header{
 	letter-spacing: 1px;
 }
 
-.clients li{
-	opacity: 0.7;
-}
-
-.clients li:hover{
+.clients li:hover,
+.clients li.selected{
 	opacity: 1;
 	cursor: pointer;
 	font-size: 10pt;
+    text-decoration:underline;
+}
+
+.clients li{
+	opacity: 0.7;
+    transition: 0.3s all ease;
 }
 
 .clients li:selected{
@@ -225,6 +227,10 @@ header{
 	z-index: 1000;
 	text-align: center;
 	border: 1px solid #E6E6E6;
+}
+
+.fancybox-button.fancybox-button--fullscreen{
+    display: none;
 }
 
 

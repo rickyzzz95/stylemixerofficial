@@ -1,29 +1,54 @@
-var arrayCategory = ["interior", "menswear", "womenswear", "print", "jewerly"];
+$(function() {
+    var self = $("#grid");
+    var categories = ["interior", "menswear", "womenswear", "jewerly", "print"];
 
-<<<<<<< Updated upstream
-=======
-
-
-$('.burger-menu').on('click', function() {
-  $(this).toggleClass("burger-menu--opened");
-  $(this).toggleClass("burger-menu--closed");
+    self.imagesLoaded(function(){
+        self.masonry({
+            gutterWidth: 15,
+            isAnimated: true,
+            itemSelector: ".item"
+        });
+    });
+    
+    $(".filter li, .nextProject p").click(function filtering(e) {
+        e.preventDefault();
+        var filter = $(this).attr("data-filter");
+        self.masonryFilter({
+            filter: function() {
+                if (!filter) return true;
+                return $(this).attr("data-filter") == filter;
+            }
+        });
+    });
 });
 
->>>>>>> Stashed changes
-$(".filter li").click(filter);
+$(".arrowTop").click(goToTop);
+$(".burger-menu").click(menu);
+$('.filter').each(selectedFilter);
 
-function filter(){
-    var category = $(this).attr("class");
-    category = category.replace("Btn","");
-    $(".grid").masonryFilter({
-        filter: function () {
-            if (!filter) return true;
-            return $(this).attr("data-filter") == category;
-        }
-    });
+function goToTop(event){
+    if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function() {
+
+            window.location.hash = hash;
+        });
+    }
 }
-<<<<<<< Updated upstream
-    
-    
-=======
->>>>>>> Stashed changes
+
+function menu(){
+  $(this).toggleClass("burger-menu--opened");
+  $(this).toggleClass("burger-menu--closed");
+}
+
+function selectedFilter(i, buttonGroup) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'li', function() {
+    $buttonGroup.find('.selected').removeClass('selected');
+    $( this ).addClass('selected');
+  });
+}

@@ -359,8 +359,8 @@
   height: 44px;
   line-height: 44px;
   text-align: center;
-  background: transparent;
-  color: #ddd;
+  background-color: #fff;
+  color: #000;
   border-radius: 0;
   cursor: pointer;
   vertical-align: top;
@@ -371,11 +371,11 @@
   pointer-events: none; }
 
 .fancybox-infobar__body, .fancybox-button {
-  background: rgba(30, 30, 30, 0.6); }
+  background: #fff; }
 
 .fancybox-button:hover:not([disabled]) {
   color: #fff;
-  background: rgba(0, 0, 0, 0.8); }
+  background: rgba(0, 0, 0, 0.2); }
 
 .fancybox-button::before,
 .fancybox-button::after {
