@@ -1,0 +1,96 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+html {
+  font-size: 16px; }
+
+body {
+  background: #000; }
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
+.circle {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 150rem;
+  height: 150rem;
+  margin-top: -75rem;
+  border-radius: 100%;
+  cursor: pointer;
+  -webkit-transition: 0.5s opacity;
+  transition: 0.5s opacity;
+  opacity: 0; }
+  .ready .circle {
+    opacity: 1;
+    display: block; }
+  .circle b {
+    display: block;
+    color: #fff;
+    font-weight: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    letter-spacing: 2px;
+    -webkit-transform-origin: center left;
+        -ms-transform-origin: center left;
+            transform-origin: center left;
+    width: 50%;
+    height: 6rem;
+    line-height: 6rem;
+    margin-top: -3rem;
+    text-transform: uppercase;
+    font-size: 1.35rem; }
+    .circle b span {
+      display: block;
+      opacity: 0.32;
+      -webkit-transform-origin: left;
+          -ms-transform-origin: left;
+              transform-origin: left; }
+      .ready .circle b span {
+        -webkit-transition: 0.5s opacity, 0.5s -webkit-transform;
+        transition: 0.5s opacity, 0.5s -webkit-transform;
+        transition: 0.5s opacity, 0.5s transform;
+        transition: 0.5s opacity, 0.5s transform, 0.5s -webkit-transform; }
+    .circle b.current span {
+      opacity: 0.9;
+      -webkit-transform: scale(1.6);
+          -ms-transform: scale(1.6);
+              transform: scale(1.6); }
+  .circle.inner b {
+    text-align: right;
+    padding-right: 1%;
+    box-sizing: border-box; }
+    .circle.inner b span {
+      -webkit-transform-origin: right;
+          -ms-transform-origin: right;
+              transform-origin: right; }
+  .circle.outer {
+    width: 225rem;
+    height: 225rem;
+    margin-right: -37.5rem;
+    margin-top: -112.5rem; }
+    .circle.outer b {
+      display: inline-block;
+      width: auto;
+      padding-left: 34%;
+      white-space: nowrap; }
+  .circle.border {
+    border: 1px solid #aaa; }
+.noTouch{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+}
+}

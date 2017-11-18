@@ -33,6 +33,17 @@ a:active {
 	color: #333;
 }
 
+#splashPage{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 9999;
+}
+#splashPage object{
+    height: 100%;
+    width: 100%;
+}
+
 /* Header Style */
 .container > header {
 	margin: 0 auto;
