@@ -40,8 +40,9 @@ $(function() {
 });
 
 setTimeout(function(){
-    $("#splashPage").fadeOut(800);
     $(".container-fluid").css('opacity',1);
+    $("#splashPage").fadeOut(500);
+    
 },7000);
 $(".arrowTop").click(goToTop);
 $(".burger-menu").click(menu);

@@ -34,14 +34,18 @@ a:active {
 }
 
 #splashPage{
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     position: fixed;
     z-index: 9999;
+    top:0;left:0;
 }
 #splashPage object{
     height: 100%;
     width: 100%;
+}
+.container-fluid{
+    transition: 0.4s all ease;
 }
 
 /* Header Style */
