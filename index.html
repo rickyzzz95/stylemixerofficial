@@ -24,11 +24,6 @@
         <header>
           <p class="logo">Style Mixer</p>
           <div class="menuArea">
-            <div class="burger-menu burger-menu--closed">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-            </div>
           </div>
         </header>
         <div class="clients">
@@ -37,37 +32,30 @@
             <li data-filter="interior">INTERIOR, LIFESTYLE AND SET DESIGN</li>
             <li data-filter="menswear">MENSWEAR</li>
             <li data-filter="womenswear">WOMENSWEAR</li>
-            <li data-filter="jewerly">JEWELRY, WATCHES LEATHER GOODS AND ACCESSORIES</li>
+            <li class="jewelry" data-filter="jewerly">JEWELRY, WATCHES LEATHER GOODS AND ACCESSORIES</li>
             <li data-filter="print">PRINT</li>
           </ul>
-        </div>
-        <div class="copy">
-          <p>©Credits: Mr Studio</p>
         </div>
       </div>
 
     <div class="containerGallery">
-      <a class="arrowTop" href="#grid"></a>
         <ul class="grid effect-2" id="grid">
+          <li class="item" data-filter="print"><video muted loop autoplay>
+      <source src="images/video.mp4" type="video/mp4">
+    </video></li>
+
           <li class="item" data-filter="jewerly" id="img1">
             <a href="images/1.jpg" data-fancybox>
               <figure><img src="images/1.jpg"></figure>
             </a>
           </li>
-                <li class="item" data-filter="womenswear" id="img2">
-                    <a href="images/3.jpg" data-fancybox>
-                        <figure><img src="images/3.jpg"></figure>
-                    </a>
-                </li>
-                <li class="item" data-filter="interior" id="img3">
-                    <a href="images/4.jpg" data-fancybox>
-                        <figure><img src="images/4.jpg"></figure>
-                    </a>
+
+                <li class="item" data-filter="interior">
+                  <video muted loop autoplay>
+                  <source src="images/video2.mp4" type="video/mp4">
+                </video>
                 </li>
 
-                <li class="item" data-filter="print"><video muted loop autoplay>
-						<source src="images/video.mp4" type="video/mp4">
-					</video></li>
                 <li class="item" data-filter="design">
                     <a href="images/13.jpg" data-fancybox>
                         <figure><img src="images/13.jpg"></figure>
@@ -78,15 +66,15 @@
                         <figure><img src="images/2.jpg"></figure>
                     </a>
                 </li>
+
+                                <li class="item" data-filter="womenswear" id="img2">
+                                    <a href="images/3.jpg" data-fancybox>
+                                        <figure><img src="images/3.jpg"></figure>
+                                    </a>
+                                </li>
                 <li id="" class="item" data-filter="print"><a href="images/13.jpg" data-fancybox>
                     <figure><img src="images/13.jpg"></figure>
                 </a></li>
-                <li class="item" data-filter="interior">
-                  <video muted loop autoplay>
-                  <source src="images/video2.mp4" type="video/mp4">
-                </video>
-
-                </li>
                 <li class="item" data-filter="menswear">
                     <a href="images/6.jpg" data-fancybox>
                         <figure><img src="images/6.jpg"></figure>
@@ -214,7 +202,9 @@
                 </li>
             </ul>
             <div class="nextProject">
-                <p data-filter="interior">Next Category</p>
+              <button class="btn btn-arrow btn-border">
+                <span>Next Category<svg id="Livello_1" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30.16"><title>f3d6</title><path d="M35.31,29.84a1.17,1.17,0,0,1,0-1.87L45.78,16.41H1.25A1.11,1.11,0,0,1,0,15.16a1.1,1.1,0,0,1,1.25-1.25H45.78L35.31,2.34a1.17,1.17,0,0,1,0-1.87,1.17,1.17,0,0,1,1.88,0q12.35,13.59,12.5,13.75a1.27,1.27,0,0,1,.31.94,1.24,1.24,0,0,1-.31.93L37.19,29.84a1.54,1.54,0,0,1-1.88,0Z" transform="translate(0 0)"/></svg></span>
+              </button>
             </div>
         </div>
     </div>
