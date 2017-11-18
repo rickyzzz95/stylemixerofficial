@@ -10,6 +10,11 @@
     src: url(../fonts/HelveticaNeueLight.ttf);
 }
 
+@font-face {
+    font-family: HelveticaNeueMedium;
+    src: url(../fonts/HelveticaNeueMedium.ttf);
+}
+
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0;}
 

@@ -1,5 +1,5 @@
 .grid {
-	max-width: 69em;
+	max-width: none;
 	list-style: none;
 	margin: 0 auto;
 	padding: 0;
@@ -9,8 +9,10 @@
 	display: block;
 	overflow: hidden;
 	float: left;
-	padding: 8px;
-	width: 33%;
+	padding-top:0px;
+	padding-left: 80px;
+	padding-bottom: 50px;
+	width: 50%;
 }
 
 body .burger-menu {
@@ -85,6 +87,10 @@ body .burger-menu--opened .bar:nth-of-type(3) {
 	width: 30px;
 }
 
+span{
+	font-family: 'HelveticaNeue';
+}
+
 /* modifiche*/
 
 header{
@@ -106,8 +112,8 @@ header{
 .logo{
 	color: #000;
 	font-size: 14pt;
-	margin-top: 30px;
-	padding-left: 40px;
+	margin-top: 40px;
+	padding-left: 50px;
 	font-family: 'HelveticaNeue';
 	float: left;
 }
@@ -116,43 +122,57 @@ header{
 	height: 100vh;
 	position: fixed;
 	background-color: #fff;
-	width: 35vw;
-	border-right: 1px #E6E6E6 solid;
+	width: 10vw;
+	z-index: 1;
 }
 
 .containerGallery{
 	height: auto;
-	width: 65vw;
+	width: 90vw;
 	float: right;
-	padding-left: 8px;
-	padding-top:8px;
-    transition: 0.2s all ease;
+	padding-left: 0px;
+	padding-top:0px;
+  transition: 0.2s all ease;
+	margin: 0;
+	z-index: 0;
 }
 .fullscreen{
     width: 100% !important;
 }
 
 .clients{
-	font-family: 'HelveticaNeue';
-	font-size: 10pt;
+	font-family: 'HelveticaNeueMedium';
+	font-size: 9pt;
 	color: #000;
 	margin-top: 30vh;
-	margin-left: 3vw;
 	letter-spacing: 1px;
+	width: 250px;
+	margin-left: 100px;
+	z-index: 10000000;
 }
 
-.clients li:hover,
+.jewelry{
+	line-height: 130%;
+}
+
+.clients li:hover{
+	color: red;
+	cursor: pointer;
+}
+
 .clients li.selected{
 	opacity: 1;
 	cursor: pointer;
-	font-size: 10pt;
-    text-decoration:underline;
+	font-size: 9pt;
+  text-decoration:underline;
+	color: red;
 }
 
 .clients li{
-	opacity: 0.7;
-    transition: 0.3s all ease;
+	opacity: 1;
+  transition: 0.3s all ease;
 }
+
 
 .clients li:selected{
 	opacity: 0;
@@ -160,7 +180,7 @@ header{
 
 .clients ul{
 	list-style: none;
-	line-height: 350%;
+	line-height: 250%;
 }
 
 .copy{
@@ -174,8 +194,20 @@ header{
 	opacity: 0.8;
 }
 
+.filter{
+	left: 50%;
+}
+
+ul{
+	margin-right: 0px;
+}
+
 .grid li{
 	overflow: hidden;
+}
+
+.grid effect-2{
+	margin: 0;
 }
 
 .grid figure{
@@ -188,12 +220,13 @@ header{
 	-moz-transition: all 0.3s;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
+	margin: 0;
 }
 
-.grid img:hover {
+/*.grid img:hover {
 	-webkit-transform: scale(1.1);
 	transform: scale(1.1);
-}
+}*/
 
 .nextProject{
 	height: 20vh;
@@ -238,6 +271,93 @@ header{
 /* fine modifiche*/
 
 
+
+
+/* arrow*/
+
+
+* {
+  box-sizing: border box;
+}
+
+
+.btn,
+.nextProject button {
+  color: white;
+  border: none;
+  font-size: 10px;
+  font-size: 1rem;
+  color: white;
+  letter-spacing: 1.5px;
+  padding: 14px 21px;
+  padding: 1.4rem 2.1rem;
+  transition: color 0.1s cubic-bezier(0.16, 0.08, 0.355, 1), background 0.1s cubic-bezier(0.16, 0.08, 0.355, 1);
+  display: inline-block;
+  cursor: pointer;
+  width: 100%;
+  min-width: 200px;
+  min-width: 20rem;
+  outline: none;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  @media (min-width: 400px) {
+    width: auto;
+  }
+  @media (min-width: 800px) {
+    font-size: 1.1rem;
+    padding: 1.6rem 2.8rem;
+  }
+  &:hover {
+
+    border-color: lighten(#000, 5%);
+    color: #000;
+  }
+}
+
+.btn-border {
+  background-color: transparent;
+  color: #000;
+}
+
+.btn-arrow {
+  position: relative;
+    transition: 300ms ease-out;
+  span {
+    display: inline-block;
+    position: relative;
+    transition: all 300ms ease-out;
+    will-change: transform;
+  }
+  &:hover span {
+    transform: translate3d(-1rem, 0, 0);
+  }
+  svg {
+    position: absolute;
+    width: 1.1em;
+    right: 0px;
+    right: 0rem;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 300ms ease-out;
+    will-change: right, opacity;
+    * {
+      stroke-width: 5;
+      stroke-color: transparent;
+    }
+  }
+  &:hover svg {
+    opacity: 1;
+    right: -2rem;
+    color: #000;
+  }
+}
+
+/* fine arrow*/
+
+
 /* Media query*/
 
 @media only screen and (max-width : 768px) {
@@ -253,6 +373,7 @@ header{
 
 	.logo{
 		margin-top: 35px;
+
 	}
 
 	.menuArea{
@@ -286,6 +407,7 @@ header{
 		padding-left: 4px;
 		padding-right: 4px;
 		padding-top: 0px;
+		z-index: 0;
 	}
 
 }
@@ -308,10 +430,6 @@ header{
 }
 
 /* Effect 1: opacity */
-.grid.effect-1 li.animate {
-	-webkit-animation: fadeIn 0.65s ease forwards;
-	animation: fadeIn 0.65s ease forwards;
-}
 
 @-webkit-keyframes fadeIn {
 	0% { }
@@ -324,12 +442,7 @@ header{
 }
 
 /* Effect 2: Move Up */
-.grid.effect-2 li.animate {
-	-webkit-transform: translateY(200px);
-	transform: translateY(200px);
-	-webkit-animation: moveUp 0.65s ease forwards;
-	animation: moveUp 0.65s ease forwards;
-}
+
 
 @-webkit-keyframes moveUp {
 	0% { }
@@ -341,13 +454,7 @@ header{
 	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
 }
 
-/* Effect 3: Scale up */
-.grid.effect-3 li.animate {
-	-webkit-transform: scale(0.6);
-	transform: scale(0.6);
-	-webkit-animation: scaleUp 0.65s ease-in-out forwards;
-	animation: scaleUp 0.65s ease-in-out forwards;
-}
+
 
 @-webkit-keyframes scaleUp {
 	0% { }
@@ -390,16 +497,7 @@ header{
 	perspective: 1300px;
 }
 
-.grid.effect-5 li.animate {
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transform-origin: 50% 50% -300px;
-	transform-origin: 50% 50% -300px;
-	-webkit-transform: rotateX(-180deg);
-	transform: rotateX(-180deg);
-	-webkit-animation: fly .8s ease-in-out forwards;
-	animation: fly .8s ease-in-out forwards;
-}
+
 
 @-webkit-keyframes fly {
 	0% { }
@@ -417,16 +515,7 @@ header{
 	perspective: 1300px;
 }
 
-.grid.effect-6 li.animate {
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transform-origin: 0% 0%;
-	transform-origin: 0% 0%;
-	-webkit-transform: rotateX(-80deg);
-	transform: rotateX(-80deg);
-	-webkit-animation: flip .8s ease-in-out forwards;
-	animation: flip .8s ease-in-out forwards;
-}
+
 
 @-webkit-keyframes flip {
 	0% { }
@@ -444,14 +533,7 @@ header{
 	perspective: 1300px;
 }
 
-.grid.effect-7 li.animate {
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transform: rotateY(-180deg);
-	transform: rotateY(-180deg);
-	-webkit-animation: helix .8s ease-in-out forwards;
-	animation: helix .8s ease-in-out forwards;
-}
+
 
 @-webkit-keyframes helix {
 	0% { }
@@ -469,14 +551,7 @@ header{
 	perspective: 1300px;
 }
 
-.grid.effect-8 li.animate {
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transform: scale(0.4);
-	transform: scale(0.4);
-	-webkit-animation: popUp .8s ease-in forwards;
-	animation: popUp .8s ease-in forwards;
-}
+
 
 @-webkit-keyframes popUp {
 	0% { }
