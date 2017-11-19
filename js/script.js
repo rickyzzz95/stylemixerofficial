@@ -1,9 +1,26 @@
-$(function() {
-    var self = $("#grid");
-    var categories = ["interior", "menswear", "womenswear", "jewerly", "print"];
-    var i = -1;
-    document.getElementById("splashPage").innerHTML='<object type="text/html" data="test.html" ></object>';
+var self = $("#grid");
+var categories = ["interior", "menswear", "womenswear", "jewerly", "print"];
+var i = -1;
+var imgAr = [
+    {img:"1.jpg", caption:"Valentino1, art direction, graphic design, luxury, jewelry, watch", filter:"jewerly"},
+    {img:"2.jpg", caption:"Valentino2, art direction, graphic design, luxury, jewelry, watch", filter:"womenswear"},
+    {img:"3.jpg", caption:"Valentino3, art direction, graphic design, luxury, jewelry, watch",filter:"womenswear"},
+    {img:"4.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"video.mp4", filter:"interior"},
+    
+    // Aggiungi qui altre immagini e/o video
+    
+];
+var uniqueRandoms = [];
+var numRandoms = imgAr.length;
 
+
+$(function() {
+    
+    getRandomImage(imgAr);
+    
+    document.getElementById("splashPage").innerHTML='<object type="text/html" data="test.html" ></object>';
+    
     self.imagesLoaded(function(){
         self.masonry({
             gutterWidth: 15,
@@ -12,39 +29,36 @@ $(function() {
             isAnimated: false
         });
     });
-    $(".fancybox").fancybox({
-//    	'showCloseButton': true,
-//    	'titlePosition': 'inside'
-        openEffect	: 'elastic',
-    	closeEffect	: 'elastic',
-
-    	helpers : {
-    		title : {
-    			type : 'inside'
-    		}
-    	}
-    });
-    $(".fancybox").click(function(){
-       console.log(this); 
-    });
     
-    $(".filter li, .nextProject p").click(function filtering(e) {
+    setTimeout(function(){
+        $(".container-fluid").css('opacity',1);
+        $("#splashPage").fadeOut(500);
+
+    },7000);
+    
+});
+
+
+$(".arrowTop").click(goToTop);
+$(".burger-menu").click(menu);
+$('.filter').each(selectedFilter);
+$("#mixer").click(randomImage);
+
+
+
+$(".filter li").click(function filtering(e) {
         e.preventDefault();
         var filter = $(this).attr("data-filter");
-//        var $previous = $(".filter").filter(function() { 
-//                return $(".filter li").attr("data-count") == i;
-//            });
-//            console.log($previous);
-        if($(this).parent().hasClass("filter")){
-            i = $(this).attr("data-count");
-        }else{
-            if(i==4){
-                i = -1;
-            }else{
-              i++;  
-            }
-            filter = categories[i];
-        }
+//        if($(this).parent().hasClass("filter")){
+//            i = $(this).attr("data-count");
+//        }else{
+//            if(i==4){
+//                i = -1;
+//            }else{
+//              i++;  
+//            }
+//            filter = categories[i];
+//        }
         
         self.masonryFilter({
             filter: function() {
@@ -52,17 +66,52 @@ $(function() {
                 return $(this).attr("data-filter") == filter;
             }
         });
+    console.log(filter);
     });
-});
 
-setTimeout(function(){
-    $(".container-fluid").css('opacity',1);
-    $("#splashPage").fadeOut(500);
+function makeUniqueRandom(imgAr) {
+        if (!uniqueRandoms.length) {
+            for (var i = 0; i < numRandoms; i++) {
+                uniqueRandoms.push(i);
+            }
+        }
+        var index = Math.floor(Math.random() * uniqueRandoms.length);
+        var val = uniqueRandoms[index];
+        uniqueRandoms.splice(index, 1);
+        return val;
+}
+
+function randomImage(){
+    if(!self.is(':empty')){
+        self.html(" ");
+        uniqueRandoms = [];
+        getRandomImage(imgAr);
+        msnry = new Masonry( self[0], {
+            gutterWidth: 15,
+            isAnimated: true,
+            itemSelector: ".item",
+            isAnimated: false
+        });
+    }
+}
+
+function getRandomImage(imgAr) {
     
-},7000);
-$(".arrowTop").click(goToTop);
-$(".burger-menu").click(menu);
-$('.filter').each(selectedFilter);
+    for(i=0; i<imgAr.length; i++){
+        var rand = makeUniqueRandom(imgAr);
+        console.log(rand);
+        var ext = imgAr[rand].img.split('.').pop();
+        if(ext === "jpg"){
+          self.append('<li class="item" data-filter="'+imgAr[rand].filter+'"><a href="images/'+imgAr[rand].img+'" data-fancybox data-caption="'+imgAr[rand].caption+'"><img src="images/'+imgAr[rand].img+'"></a></li>');  
+        } else if(ext === "mp4"){
+            self.append('<li class="item" data-filter="'+imgAr[rand].filter+'"><video muted loop autoplay><source src="images/'+imgAr[rand].img+'" type="video/mp4"></video></li>');  
+        }
+    }
+}
+
+
+
+
 
 function goToTop(event){
     if (this.hash !== "") {

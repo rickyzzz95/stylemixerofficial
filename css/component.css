@@ -152,7 +152,7 @@ header {
 }
 
 .mainMenu{
-  font-family: 'HelveticaNeueRegular';
+  font-family: 'HelveticaNeueLight';
   font-size: 12pt;
   color: #000;
   z-index: 1;
@@ -162,6 +162,7 @@ header {
 
 .mainMenu :hover{
   color: red;
+    cursor: pointer;
 }
 
 .mainMenu li.selected{

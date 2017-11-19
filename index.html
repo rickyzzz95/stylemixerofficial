@@ -2,256 +2,262 @@
 <html lang="en" class="no-js">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Style Mixer</title>
-  <meta name="description" content="Loading Effects for Grid Items with CSS Animations" />
-  <meta name="keywords" content="css animation, loading effect, google plus, grid items, masonry" />
-  <meta name="author" content="Codrops" />
-  <link rel="shortcut icon" href="../favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/reset.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/default.css" />
-  <link rel="stylesheet" type="text/css" href="css/component.css" />
-  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Mixer</title>
+    <meta name="description" content="Loading Effects for Grid Items with CSS Animations" />
+    <meta name="keywords" content="css animation, loading effect, google plus, grid items, masonry" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" />
 </head>
 
 <body>
+    
   <div id="splashPage">
   </div>
-  <div class="container-fluid" style="opacity: 0">
-    <div class="containerBrands">
-      <header>
-        <p class="logo">Style Mixer</p>
-        <div class="menuArea">
+ <div class="container-fluid" style="opacity: 0">
+<!--    <div class="container-fluid">-->
+        <div class="containerBrands">
+            <header>
+                <p class="logo">Style Mixer</p>
+                <div class="menuArea">
+                </div>
+            </header>
+            <div class="clients">
+                <ul class="mainMenu">
+                    <li>ABOUT</li>
+                    <li>CLIENTS</li>
+                    <li>CONTACT</li>
+                    <li>FILTER</li>
+                </ul>
+                <ul class="filter">
+                    <li class="selected" data-filter data-count="-1" id="mixer">MIXER</li>
+                    <li data-filter="interior" data-count="0">INTERIOR, LIFESTYLE AND SET DESIGN</li>
+                    <li data-filter="menswear" data-count="1">MENSWEAR</li>
+                    <li data-filter="womenswear" data-count="2">WOMENSWEAR</li>
+                    <li data-filter="jewerly" data-count="3">JEWELRY, WATCHES LEATHER GOODS AND ACCESSORIES</li>
+                    <li data-filter="print" data-count="4">PRINT</li>
+                </ul>
+            </div>
         </div>
-      </header>
-      <div class="clients">
-        <ul class="mainMenu">
-          <li>ABOUT</li>
-          <li>CLIENTS</li>
-          <li>CONTACT</li>
-          <li>FILTER</li>
-        </ul>
-        <ul class="filter">
-          <li class="selected" data-filter data-count="-1">MIXER</li>
-          <li data-filter="interior" data-count="0">INTERIOR, LIFESTYLE AND SET DESIGN</li>
-          <li data-filter="menswear" data-count="1">MENSWEAR</li>
-          <li data-filter="womenswear" data-count="2">WOMENSWEAR</li>
-          <li data-filter="jewerly" data-count="3">JEWELRY, WATCHES LEATHER GOODS AND ACCESSORIES</li>
-          <li data-filter="print" data-count="4">PRINT</li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="containerGallery">
-      <ul class="grid effect-2" id="grid">
+        <div class="containerGallery">
+            <ul class="grid effect-2" id="grid">
 
-        <li class="item" data-filter="print"><video muted loop autoplay>
+<!--
+                <li class="item" data-filter="print"><video muted loop autoplay>
           <source src="images/video.mp4" type="video/mp4">
           </video></li>
 
-          <li class="item" data-filter="jewerly" id="img1">
-            <a class="fancybox" href="images/1.jpg" title="Gioiello bello">
-              <figure><img src="images/1.jpg"></figure>
-            </a>
-          </li>
+                <li class="item imgContainer" data-filter="jewerly" id="img1">
+                    <a data-fancybox href="images/1.jpg" data-caption="Valentino, art direction, graphic design, luxury, jewelry, watch">
+                        <img src="images/1.jpg">
+                    </a>
+                </li>
 
-          <li class="item" data-filter="interior">
-            <video muted loop autoplay>
-              <source src="images/video2.mp4" type="video/mp4">
-              </video>
-            </li>
+                <li class="item" data-filter="interior">
+                    <video muted loop autoplay>
+                        <source src="images/video2.mp4" type="video/mp4">
+                    </video>
+                </li>
 
-            <li class="item" data-filter="design">
-              <a href="images/13.jpg" data-fancybox>
-                <figure><img src="images/13.jpg"></figure>
-              </a>
-            </li>
+                <li class="item imgContainer" data-filter="design">
+                    <a href="images/13.jpg" data-fancybox data-caption="Etro, art direction, graphic design, luxury, leather goods">
+                        <img src="images/13.jpg">
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear">
-              <a href="images/2.jpg" data-fancybox>
-                <figure><img src="images/2.jpg"></figure>
-              </a>
-            </li>
+                <li class="item imgContainer" data-filter="womenswear">
+                    <a href="images/2.jpg" data-fancybox data-caption="Etro, art direction, graphic design, luxury, fashion">
+                        <figure><img src="images/2.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear" id="img2">
-              <a href="images/3.jpg" data-fancybox>
-                <figure><img src="images/3.jpg"></figure>
-              </a>
-            </li>
+                <li class="item imgContainer" data-filter="womenswear" id="img2">
+                    <a href="images/3.jpg" data-fancybox data-caption="Gioiello bello">
+                        <figure><img src="images/3.jpg"></figure>
+                    </a>
+                </li>
 
-            <li id="" class="item" data-filter="print"><a href="images/13.jpg" data-fancybox>
-              <figure><img src="images/13.jpg"></figure>
-            </a></li>
+                <li id="" class="item" data-filter="print">
+                    <a href="images/13.jpg" data-fancybox>
+                        <figure><img src="images/13.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="menswear">
-              <a href="images/6.jpg" data-fancybox>
-                <figure><img src="images/6.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="menswear">
+                    <a href="images/6.jpg" data-fancybox>
+                        <figure><img src="images/6.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="menswear">
-              <a href="images/7.jpg" data-fancybox>
-                <figure><img src="images/7.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="menswear">
+                    <a href="images/7.jpg" data-fancybox>
+                        <figure><img src="images/7.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="menswear">
-              <a href="images/8.jpg" data-fancybox>
-                <figure><img src="images/8.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="menswear">
+                    <a href="images/8.jpg" data-fancybox>
+                        <figure><img src="images/8.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear">
-              <a href="images/9.jpg" data-fancybox>
-                <figure><img src="images/9.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="womenswear">
+                    <a href="images/9.jpg" data-fancybox>
+                        <figure><img src="images/9.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="jewerly">
-              <a href="images/12.jpg" data-fancybox>
-                <figure><img src="images/12.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="jewerly">
+                    <a href="images/12.jpg" data-fancybox>
+                        <figure><img src="images/12.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="design">
-              <a href="images/13.jpg" data-fancybox>
-                <figure><img src="images/13.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="design">
+                    <a href="images/13.jpg" data-fancybox>
+                        <figure><img src="images/13.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear">
-              <a href="images/10.jpg" data-fancybox>
-                <figure><img src="images/10.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="womenswear">
+                    <a href="images/10.jpg" data-fancybox>
+                        <figure><img src="images/10.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear">
-              <a href="images/11.jpg" data-fancybox>
-                <figure><img src="images/11.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="womenswear">
+                    <a href="images/11.jpg" data-fancybox>
+                        <figure><img src="images/11.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear">
-              <a href="images/2.jpg" data-fancybox>
-                <figure><img src="images/2.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="womenswear">
+                    <a href="images/2.jpg" data-fancybox>
+                        <figure><img src="images/2.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="jewerly">
-              <a href="images/1.jpg" data-fancybox>
-                <figure><img src="images/1.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="jewerly">
+                    <a href="images/1.jpg" data-fancybox>
+                        <figure><img src="images/1.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear">
-              <a href="images/3.jpg" data-fancybox>
-                <figure><img src="images/3.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="womenswear">
+                    <a href="images/3.jpg" data-fancybox>
+                        <figure><img src="images/3.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="interior">
-              <a href="images/4.jpg" data-fancybox>
-                <figure><img src="images/4.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="interior">
+                    <a href="images/4.jpg" data-fancybox>
+                        <figure><img src="images/4.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="interior">
-              <a href="images/5.jpg" data-fancybox>
-                <figure><img src="images/5.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="interior">
+                    <a href="images/5.jpg" data-fancybox>
+                        <figure><img src="images/5.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="menswear">
-              <a href="images/6.jpg" data-fancybox>
-                <figure><img src="images/6.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="menswear">
+                    <a href="images/6.jpg" data-fancybox>
+                        <figure><img src="images/6.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="menswear">
-              <a href="images/7.jpg" data-fancybox>
-                <figure><img src="images/7.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="menswear">
+                    <a href="images/7.jpg" data-fancybox>
+                        <figure><img src="images/7.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="menswear">
-              <a href="images/8.jpg" data-fancybox>
-                <figure><img src="images/8.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="menswear">
+                    <a href="images/8.jpg" data-fancybox>
+                        <figure><img src="images/8.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear">
-              <a href="images/9.jpg" data-fancybox>
-                <figure><img src="images/9.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="womenswear">
+                    <a href="images/9.jpg" data-fancybox>
+                        <figure><img src="images/9.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="jewerly">
-              <a href="images/.jpg" data-fancybox>
-                <figure><img src="images/12.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="jewerly">
+                    <a href="images/.jpg" data-fancybox>
+                        <figure><img src="images/12.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="design">
-              <a href="images/13.jpg" data-fancybox>
-                <figure><img src="images/13.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="design">
+                    <a href="images/13.jpg" data-fancybox>
+                        <figure><img src="images/13.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear">
-              <a href="images/10.jpg" data-fancybox>
-                <figure><img src="images/10.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="womenswear">
+                    <a href="images/10.jpg" data-fancybox>
+                        <figure><img src="images/10.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear">
-              <a href="images/11.jpg" data-fancybox>
-                <figure><img src="images/11.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="womenswear">
+                    <a href="images/11.jpg" data-fancybox>
+                        <figure><img src="images/11.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear">
-              <a href="images/2.jpg" data-fancybox>
-                <figure><img src="images/2.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="womenswear">
+                    <a href="images/2.jpg" data-fancybox>
+                        <figure><img src="images/2.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="jewerly">
-              <a href="images/1.jpg" data-fancybox>
-                <figure><img src="images/1.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="jewerly">
+                    <a href="images/1.jpg" data-fancybox>
+                        <figure><img src="images/1.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="womenswear">
-              <a href="images/3.jpg" data-fancybox>
-                <figure><img src="images/3.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="womenswear">
+                    <a href="images/3.jpg" data-fancybox>
+                        <figure><img src="images/3.jpg"></figure>
+                    </a>
+                </li>
 
-            <li class="item" data-filter="interior">
-              <a href="images/4.jpg" data-fancybox>
-                <figure><img src="images/4.jpg"></figure>
-              </a>
-            </li>
+                <li class="item" data-filter="interior">
+                    <a href="images/4.jpg" data-fancybox>
+                        <figure><img src="images/4.jpg"></figure>
+                    </a>
+                </li>
+-->
 
-          </ul>
-          <div class="nextProject">
-            <button class="btn btn-arrow btn-border">
+            </ul>
+            <div class="nextProject">
+                <button class="btn btn-arrow btn-border">
               <span>Next Category<svg id="Livello_1" data-name="Livello 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 30.16"><title>f3d6</title><path d="M35.31,29.84a1.17,1.17,0,0,1,0-1.87L45.78,16.41H1.25A1.11,1.11,0,0,1,0,15.16a1.1,1.1,0,0,1,1.25-1.25H45.78L35.31,2.34a1.17,1.17,0,0,1,0-1.87,1.17,1.17,0,0,1,1.88,0q12.35,13.59,12.5,13.75a1.27,1.27,0,0,1,.31.94,1.24,1.24,0,0,1-.31.93L37.19,29.84a1.54,1.54,0,0,1-1.88,0Z" transform="translate(0 0)"/></svg></span>
             </button>
-          </div>
+            </div>
         </div>
-      </div>
+    </div>
 
-      <script src="js/jquery-2.2.0.min.js"></script>
-      <script src="js/modernizr.custom.js"></script>
-      <script src="js/masonry-3.1.4.js"></script>
-      <script src="js/imagesloaded.js"></script>
-      <script src="js/masonry.filter.js"></script>
-      <script src="js/jquery.fancybox.js"></script>
-      <script src="js/script.js"></script>
-    </body>
+    <script src="js/jquery-2.2.0.min.js"></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/masonry-3.1.4.js"></script>
+    <script src="js/imagesloaded.js"></script>
+    <script src="js/masonry.filter.js"></script>
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/script.js"></script>
+</body>
 
-    </html>
+</html>

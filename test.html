@@ -272,10 +272,17 @@
     <script src="js/main.bundle.js" type="text/javascript"></script>
     <script src="js/jquery-2.2.0.min.js"></script>
     <script>
+        
+        
         setTimeout(function(){
-            $(".circle b").not(".current").fadeOut(2000);
-            $(".current, .border").delay(1500).fadeOut(2000);
-        },3500);
+            var $mainTitles = $(".current");
+            var $titles = $(".circle b").not(".current");
+            var $border = $(".border");
+            
+            TweenLite.to($mainTitles, 2, {autoAlpha: 0, delay:1.2});
+            TweenLite.to($titles, 1, {autoAlpha: 0});
+            TweenLite.to($border, 2, {autoAlpha: 0, delay:0.5});
+        },4000);
     </script>
 
 </body>
