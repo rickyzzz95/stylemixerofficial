@@ -151,48 +151,72 @@ header {
     width: 100% !important;
 }
 
+.mainMenu{
+  font-family: 'HelveticaNeueRegular';
+  font-size: 12pt;
+  color: #000;
+  z-index: 1;
+  letter-spacing: 1px;
+  line-height: 200%;
+}
+
+.mainMenu :hover{
+  color: red;
+}
+
+.mainMenu li.selected{
+  color: red;
+  text-decoration: underline;
+}
+
 .clients {
-    font-family: 'HelveticaNeueMedium';
-    font-size: 9pt;
+    font-size: 8pt;
     color: #000;
-    margin-top: 30vh;
+    margin-top: 20vh;
     letter-spacing: 1px;
-    width: 250px;
-    margin-left: 100px;
-    z-index: 10000000;
+    width: 400px;
+    position: absolute;
+    margin-left:120px;
+    z-index: 1;
 }
 
 .jewelry {
     line-height: 130%;
 }
 
-.clients li:hover {
+.filter{
+  padding-top: 10px;
+}
+
+.filter li:hover {
     color: red;
     cursor: pointer;
 }
 
-.clients li.selected {
+.filter li.selected {
     text-decoration: underline;
     color: red;
 }
 
-.clients li {
-    cursor: pointer;
-    font-size: 9pt;
-    opacity: 1;
-    transition: 0.2s all ease;
-    line-height: 140%;
-    margin-bottom: 10px;
+.filter li {
+  font-family: 'HelveticaNeue';
+  cursor: pointer;
+  font-size: 9pt;
+  opacity: 1;
+  transition: 0.2s all ease;
+  line-height: 140%;
+  margin-bottom: 10px;
 }
 
 
-.clients li:selected {
+.filter li:selected {
     opacity: 0;
 }
 
-.clients ul {
+.filter ul {
     list-style: none;
     line-height: 250%;
+    margin-left: 2vh;
 }
 
 .copy {
@@ -207,7 +231,7 @@ header {
 }
 
 .filter {
-    left: 50%;
+    padding-left: 30px;
 }
 
 .item {
@@ -404,6 +428,7 @@ ul {
         text-align: center;
         margin-top: 0px;
         margin-left: 0px;
+        margin-left: 60px;
     }
 
     .copy {

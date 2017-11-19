@@ -1827,7 +1827,7 @@
             isOriginTop: true,
             isResizeBound: true,
             // item options
-            transitionDuration: '0.4s',
+            transitionDuration: '0.6s',
             hiddenStyle: {
                 opacity: 0,
 //                transform: 'scale(0.001)'
@@ -2740,7 +2740,7 @@
             // if columnWidth is 0, default to outerWidth of first item
             if (!this.columnWidth) {
                 var firstItem;
-                
+
                 for (var i = 0, len = this.items.length; i < len; i++) {
                     if (!this.items[i].isIgnored) {
                         firstItem = this.items[i];
