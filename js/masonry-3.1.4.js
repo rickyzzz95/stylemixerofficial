@@ -1830,11 +1830,11 @@
             transitionDuration: '0.4s',
             hiddenStyle: {
                 opacity: 0,
-                transform: 'scale(0.001)'
+//                transform: 'scale(0.001)'
             },
             visibleStyle: {
                 opacity: 1,
-                transform: 'scale(1)'
+//                transform: 'scale(1)'
             }
         };
 

@@ -8,8 +8,24 @@ $(function() {
         self.masonry({
             gutterWidth: 15,
             isAnimated: true,
-            itemSelector: ".item"
+            itemSelector: ".item",
+            isAnimated: false
         });
+    });
+    $(".fancybox").fancybox({
+//    	'showCloseButton': true,
+//    	'titlePosition': 'inside'
+        openEffect	: 'elastic',
+    	closeEffect	: 'elastic',
+
+    	helpers : {
+    		title : {
+    			type : 'inside'
+    		}
+    	}
+    });
+    $(".fancybox").click(function(){
+       console.log(this); 
     });
     
     $(".filter li, .nextProject p").click(function filtering(e) {
