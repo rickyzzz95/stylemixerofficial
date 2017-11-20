@@ -29,7 +29,7 @@ $(function() {
 
     getRandomImage(imgAr);
 
-    document.getElementById("splashPage").innerHTML='<object type="text/html" data="menu.html" ></object>';
+    document.getElementById("splashPage").innerHTML='<object type="text/html" data="test.html" ></object>';
 
     self.imagesLoaded(function(){
         self.masonry({
@@ -41,7 +41,7 @@ $(function() {
     });
 
     setTimeout(function(){
-        $(".container-fluid").css('opacity',1);
+        $(".container").css('opacity',1);
         $("#splashPage").fadeOut(500);
     },7000);
 
