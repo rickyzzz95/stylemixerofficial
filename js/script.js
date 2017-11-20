@@ -7,18 +7,15 @@ var imgAr = [
     {img:"3.jpg", caption:"Valentino3, art direction, graphic design, luxury, jewelry, watch",filter:"womenswear"},
     {img:"video2.mp4", filter:"interior"},
     {img:"4.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
-    {img:"5.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
-    {img:"6.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
-    {img:"7.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
-    {img:"8.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"5.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"jewerly"},
+    {img:"6.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"menswear"},
+    {img:"7.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"womenswear"},
+    {img:"8.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"print"},
     {img:"9.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
-    {img:"10.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
-    {img:"11.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
-    {img:"12.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
-    {img:"13.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
-    {img:"14.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
-    {img:"15.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
-
+    {img:"10.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"jewerly"},
+    {img:"11.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"menswear"},
+    {img:"12.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"womenswear"},
+    {img:"13.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"print"},
     {img:"video.mp4", filter:"interior"},
 
     // Aggiungi qui altre immagini e/o video
@@ -32,7 +29,7 @@ $(function() {
 
     getRandomImage(imgAr);
 
-    document.getElementById("splashPage").innerHTML='<object type="text/html" data="test.html" ></object>';
+    document.getElementById("splashPage").innerHTML='<object type="text/html" data="menu.html" ></object>';
 
     self.imagesLoaded(function(){
         self.masonry({
@@ -46,17 +43,14 @@ $(function() {
     setTimeout(function(){
         $(".container-fluid").css('opacity',1);
         $("#splashPage").fadeOut(500);
-
     },7000);
 
 });
-
 
 $(".arrowTop").click(goToTop);
 $(".burger-menu").click(menu);
 $('.filter').each(selectedFilter);
 $("#mixer").click(randomImage);
-
 
 
 $(".filter li").click(function filtering(e) {
@@ -79,7 +73,6 @@ $(".filter li").click(function filtering(e) {
                 return $(this).attr("data-filter") == filter;
             }
         });
-    console.log(filter);
     });
 
 function makeUniqueRandom(imgAr) {
@@ -96,15 +89,15 @@ function makeUniqueRandom(imgAr) {
 
 function randomImage(){
     if(!self.is(':empty')){
-        self.html(" ");
-        uniqueRandoms = [];
-        getRandomImage(imgAr);
-        msnry = new Masonry( self[0], {
-            gutterWidth: 15,
-            isAnimated: true,
-            itemSelector: ".item",
-            isAnimated: false
-        });
+//        self.html(" ");
+//        uniqueRandoms = [];
+//        getRandomImage(imgAr);
+//        msnry = new Masonry( self[0], {
+//            gutterWidth: 15,
+//            isAnimated: true,
+//            itemSelector: ".item",
+//            isAnimated: false
+//        });
     }
 }
 
@@ -122,19 +115,13 @@ function getRandomImage(imgAr) {
     }
 }
 
-
-
-
-
 function goToTop(event){
     if (this.hash !== "") {
         event.preventDefault();
         var hash = this.hash;
-
         $('html, body').animate({
             scrollTop: $(hash).offset().top
         }, 800, function() {
-
             window.location.hash = hash;
         });
     }
