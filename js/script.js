@@ -5,22 +5,35 @@ var imgAr = [
     {img:"1.jpg", caption:"Valentino1, art direction, graphic design, luxury, jewelry, watch", filter:"jewerly"},
     {img:"2.jpg", caption:"Valentino2, art direction, graphic design, luxury, jewelry, watch", filter:"womenswear"},
     {img:"3.jpg", caption:"Valentino3, art direction, graphic design, luxury, jewelry, watch",filter:"womenswear"},
+    {img:"video2.mp4", filter:"interior"},
     {img:"4.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"5.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"6.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"7.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"8.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"9.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"10.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"11.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"12.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"13.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"14.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+    {img:"15.jpg", caption:"Valentino4, art direction, graphic design, luxury, jewelry, watch", filter:"interior"},
+
     {img:"video.mp4", filter:"interior"},
-    
+
     // Aggiungi qui altre immagini e/o video
-    
+
 ];
 var uniqueRandoms = [];
 var numRandoms = imgAr.length;
 
 
 $(function() {
-    
+
     getRandomImage(imgAr);
-    
+
     document.getElementById("splashPage").innerHTML='<object type="text/html" data="test.html" ></object>';
-    
+
     self.imagesLoaded(function(){
         self.masonry({
             gutterWidth: 15,
@@ -29,13 +42,13 @@ $(function() {
             isAnimated: false
         });
     });
-    
+
     setTimeout(function(){
         $(".container-fluid").css('opacity',1);
         $("#splashPage").fadeOut(500);
 
     },7000);
-    
+
 });
 
 
@@ -55,11 +68,11 @@ $(".filter li").click(function filtering(e) {
 //            if(i==4){
 //                i = -1;
 //            }else{
-//              i++;  
+//              i++;
 //            }
 //            filter = categories[i];
 //        }
-        
+
         self.masonryFilter({
             filter: function() {
                 if (!filter) return true;
@@ -96,15 +109,15 @@ function randomImage(){
 }
 
 function getRandomImage(imgAr) {
-    
+
     for(i=0; i<imgAr.length; i++){
         var rand = makeUniqueRandom(imgAr);
         console.log(rand);
         var ext = imgAr[rand].img.split('.').pop();
         if(ext === "jpg"){
-          self.append('<li class="item" data-filter="'+imgAr[rand].filter+'"><a href="images/'+imgAr[rand].img+'" data-fancybox data-caption="'+imgAr[rand].caption+'"><img src="images/'+imgAr[rand].img+'"></a></li>');  
+          self.append('<li class="item" data-filter="'+imgAr[rand].filter+'"><a href="images/'+imgAr[rand].img+'" data-fancybox data-caption="'+imgAr[rand].caption+'"><img src="images/'+imgAr[rand].img+'"></a></li>');
         } else if(ext === "mp4"){
-            self.append('<li class="item" data-filter="'+imgAr[rand].filter+'"><video muted loop autoplay><source src="images/'+imgAr[rand].img+'" type="video/mp4"></video></li>');  
+            self.append('<li class="item" data-filter="'+imgAr[rand].filter+'"><video muted loop autoplay><source src="images/'+imgAr[rand].img+'" type="video/mp4"></video></li>');
         }
     }
 }
