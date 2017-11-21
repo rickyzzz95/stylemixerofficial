@@ -51,6 +51,9 @@ $(".arrowTop").click(goToTop);
 $(".burger-menu").click(menu);
 $('.filter').each(selectedFilter);
 $("#mixer").click(randomImage);
+$("#openMenu").click(openMenu);
+$(".close").click(closeMenu);
+
 
 
 $(".filter li").click(function filtering(e) {
@@ -74,6 +77,15 @@ $(".filter li").click(function filtering(e) {
             }
         });
     });
+
+function openMenu(){
+    $(".container").fadeOut(500);
+    $(".container-fluid").delay(1000).fadeIn(1000);
+}
+function closeMenu(){
+    $(".container-fluid").fadeOut(500);
+    $(".container").delay(1000).fadeIn(1000);
+}
 
 function makeUniqueRandom(imgAr) {
         if (!uniqueRandoms.length) {

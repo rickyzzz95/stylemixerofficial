@@ -25,6 +25,10 @@
     src: url(../fonts/HelveticaNeue-UltraLight.ttf);
 }
 
+body{
+    font-family: "HelveticaNeue";
+}
+
 .container-fluid{
     padding-right:15px;
     padding-left:15px;
@@ -32,6 +36,7 @@
     margin-left:auto;
     overflow: auto;
     overflow-x: hidden;
+    display: none;
 }
 .menuTitle{
     color: #000;
@@ -39,6 +44,7 @@
     margin-top: 10%;
     margin-left: 5%;
     position: relative;
+    opacity: 0.99;
 }
 .menuTitle h1{
     font-size: 240px;
@@ -85,7 +91,6 @@
 }
 .close{
     color: #000;
-    font-family: "HelveticaNeue";
     font-size: 16px;
     line-height: 30px;
     text-align: right;
@@ -105,7 +110,6 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 .clearfix:after { clear: both; }
 
 body {
-	font-family: 'HelveticaNeue';
 	color: #fff;
 	background: #fff;
 }
@@ -131,10 +135,6 @@ a:active {
     height: 100%;
     width: 100%;
 }
-.container-fluid{
-    transition: 0.4s all ease;
-}
-
 /* Header Style */
 .container > header {
 	margin: 0 auto;
