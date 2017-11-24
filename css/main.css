@@ -10,7 +10,8 @@ html {
   font-size: 16px; }
 
 body {
-  background: #000; }
+  background: #000;
+font-family: "ATSackers", sans-serif;}
 
 .wrapper {
   position: relative;
@@ -41,7 +42,6 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    letter-spacing: 2px;
     -webkit-transform-origin: center left;
         -ms-transform-origin: center left;
             transform-origin: center left;
@@ -50,12 +50,10 @@ body {
     line-height: 6rem;
     margin-top: -3rem;
     text-transform: uppercase;
-    font-size: 1.35rem; }
+    font-size: 1.23rem; }
     .circle b span {
       display: block;
       opacity: 0.32;
-        font-family: "ATSackers", sans-serif;
-        font-size: 14px;
       -webkit-transform-origin: left;
           -ms-transform-origin: left;
               transform-origin: left; }
