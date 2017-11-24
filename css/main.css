@@ -54,6 +54,8 @@ body {
     .circle b span {
       display: block;
       opacity: 0.32;
+        font-family: "ATSackers", sans-serif;
+        font-size: 14px;
       -webkit-transform-origin: left;
           -ms-transform-origin: left;
               transform-origin: left; }

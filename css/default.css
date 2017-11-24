@@ -24,6 +24,10 @@
     font-family: HelveticaNeueExtraLight;
     src: url(../fonts/HelveticaNeue-UltraLight.ttf);
 }
+@font-face {
+    font-family: ATSackers;
+    src: url(../fonts/AT_Sackers_Heavy_Gothic.ttf);
+}
 
 body{
     font-family: "HelveticaNeue";
@@ -81,8 +85,7 @@ body{
     color: #000;
     font-family: "HelveticaNeue";
     font-size: 15px;
-    line-height: 30px;
-    letter-spacing: 1%;
+    line-height: 24px;
 }
 #last{
     margin-bottom: 2%;

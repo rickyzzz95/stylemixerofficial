@@ -122,7 +122,7 @@ function getRandomImage(imgAr) {
         if(ext === "jpg"){
           self.append('<li class="item" data-filter="'+imgAr[rand].filter+'"><a href="images/'+imgAr[rand].img+'" data-fancybox data-caption="'+imgAr[rand].caption+'"><img src="images/'+imgAr[rand].img+'"></a></li>');
         } else if(ext === "mp4"){
-            self.append('<li class="item" data-filter="'+imgAr[rand].filter+'"><video muted loop autoplay><source src="images/'+imgAr[rand].img+'" type="video/mp4"></video></li>');
+            self.append('<li class="item" data-filter="'+imgAr[rand].filter+'"><video muted loop autoplay controls><source src="images/'+imgAr[rand].img+'" type="video/mp4"></video></li>');
         }
     }
 }
