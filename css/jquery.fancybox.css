@@ -16,9 +16,9 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 90vw;
+  width: 100%;
   height: 100%;
-  z-index: 99993;
+  z-index: 2;
   -webkit-tap-highlight-color: transparent;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -30,6 +30,18 @@
   .fancybox-container{
     width: 100vw;
   }
+
+  .fancybox-caption {
+    padding: 20px 0;
+  /*  border-top: 1px solid rgba(255, 255, 255, 0.4);*/
+    font-size: 9pt;
+    font-family: "HelveticaNeue";
+    color: #000;
+    text-align: center;
+  /*    text-decoration: underline;*/
+  /*    letter-spacing: 1px;*/
+    line-height: 20px;
+    -webkit-text-size-adjust: none; }
 
 }
 /* Make sure that the first one is on the top */
@@ -323,19 +335,25 @@
 
 /* Caption */
 .fancybox-caption-wrap {
+  width: 80%;
+  margin-left: 10%;
+  font-size: 7pt;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 60px 30px 0 30px;
-  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0.8) 100%);
+/*  padding: 60px 30px 0 30px;*/
+/*  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.1) 20%, rgba(0, 0, 0, 0.2) 40%, rgba(0, 0, 0, 0.6) 80%, rgba(0, 0, 0, 0.8) 100%);*/
   pointer-events: none; }
 
 .fancybox-caption {
-  padding: 30px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  font-size: 14px;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  color: #fff;
+  padding: 15px 0;
+/*  border-top: 1px solid rgba(255, 255, 255, 0.4);*/
+  font-size: 10pt;
+  font-family: "HelveticaNeue";
+  color: #000;
+    text-align: center;
+/*    text-decoration: underline;*/
+/*    letter-spacing: 1px;*/
   line-height: 20px;
   -webkit-text-size-adjust: none; }
 
@@ -374,8 +392,7 @@
   background: #fff; }
 
 .fancybox-button:hover:not([disabled]) {
-  color: #fff;
-  background: rgba(0, 0, 0, 0.2); }
+  background: rgba(0, 0, 0, 0); }
 
 .fancybox-button::before,
 .fancybox-button::after {
@@ -623,9 +640,7 @@
   .fancybox-button--left,
   .fancybox-button--right {
     display: none !important; }
-  .fancybox-caption {
-    padding: 20px 0;
-    margin: 0; } }
+ }
 
 
 /* Fullscreen  */

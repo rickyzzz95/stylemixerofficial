@@ -1,18 +1,20 @@
 .grid {
-	max-width: none;
-	list-style: none;
-	margin: 0 auto;
-	padding: 0;
+  max-width: none;
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  z-index: 0;
 }
 
 .grid li {
-	display: block;
-	overflow: hidden;
-	float: left;
-	padding-top:0px;
-	padding-left: 80px;
-	padding-bottom: 50px;
-	width: 50%;
+  display: block;
+  overflow: hidden;
+  float: left;
+  padding-top: 0px;
+  padding-left: 65px;
+  padding-bottom: 50px;
+  z-index: 0;
+  width: 50%;
 }
 
 body .burger-menu {
@@ -24,6 +26,7 @@ body .burger-menu {
   cursor: pointer;
   height: 30px;
 }
+
 body .burger-menu .bar {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -33,248 +36,290 @@ body .burger-menu .bar {
   background-color: #000;
 }
 
-.bar:nth-of-type(2){
-	 margin: 4px 0;
-	 opacity: 0;
+.bar:nth-of-type(2) {
+  margin: 4px 0;
+  opacity: 0;
 }
 
 body .burger-menu--closed {
   -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
+
 body .burger-menu--closed .bar {
   float: right;
 }
+
 body .burger-menu--closed .bar:nth-of-type(2) {
   width: 100%;
   -webkit-transition-property: margin, height, width;
   transition-property: margin, height, width;
   -webkit-transition-delay: 0.3s, 0.3s, 0s;
-          transition-delay: 0.3s, 0.3s, 0s;
+  transition-delay: 0.3s, 0.3s, 0s;
 }
+
 body .burger-menu--closed .bar:nth-of-type(3) {
   width: 50%;
 }
+
 body .burger-menu--closed:hover .bar:nth-of-type(2) {
   width: 100%;
 }
+
 body .burger-menu--closed:hover .bar:nth-of-type(3) {
   width: 100%;
 }
+
 body .burger-menu--opened {
   padding-top: 12px;
 }
+
 body .burger-menu--opened .bar:nth-of-type(1) {
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  transition-delay: 0.3s;
   height: 1px;
-	width: 30px;
+  width: 30px;
 }
+
 body .burger-menu--opened .bar:nth-of-type(2) {
   opacity: 0;
   height: 0;
   margin: -1px;
 
 }
+
 body .burger-menu--opened .bar:nth-of-type(3) {
   -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
   -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  transition-delay: 0.3s;
   height: 1px;
-	width: 30px;
+  width: 30px;
 }
 
-span{
-	font-family: 'HelveticaNeue';
+span {
+  font-family: 'HelveticaNeue';
 }
 
 /* modifiche*/
 
-header{
-	top: 0px;
-	height: 100px;
-	width: 35vw;
-	position: fixed;
+header {
+  top: 0px;
+  height: 100px;
+  width: 100vw;
+  position: fixed;
 }
 
-#video{
-	padding-bottom: 8px;
+.menuVoice{
+  display: none;
 }
 
-.navBar{
-	height: auto;
-	width: 100vw;
+#video {
+  padding-bottom: 8px;
 }
 
-.logo{
-	color: #000;
-	font-size: 14pt;
-	margin-top: 40px;
-	padding-left: 50px;
-	font-family: 'HelveticaNeue';
-	float: left;
+.navBar {
+  height: auto;
+  width: 100vw;
 }
 
-.containerBrands{
-	height: 100vh;
-	position: fixed;
-	background-color: #fff;
-	width: 10vw;
-	z-index: 1;
+.logo {
+  color: #000;
+  font-size: 14pt;
+  margin-top: 40px;
+  padding-left: 50px;
+  font-family: 'HelveticaNeue';
+  float: left;
+  z-index: 99;
 }
 
-.containerGallery{
-	height: auto;
-	width: 90vw;
-	float: right;
-	padding-left: 0px;
-	padding-top:0px;
+.containerBrands {
+  height: 100vh;
+  position: fixed;
+  background-color: #fff;
+  width: 10vw;
+  z-index: 1;
+}
+
+.containerGallery {
+  height: auto;
+  width: 90vw;
+  float: right;
+  padding-left: 0px;
+  padding-top: 0px;
   transition: 0.2s all ease;
-	margin: 0;
-	z-index: 0;
-}
-.fullscreen{
-    width: 100% !important;
+  margin: 0;
+  z-index: 0;
 }
 
-.clients{
-	font-family: 'HelveticaNeueMedium';
-	font-size: 9pt;
-	color: #000;
-	margin-top: 30vh;
-	letter-spacing: 1px;
-	width: 250px;
-	margin-left: 100px;
-	z-index: 10000000;
+.fullscreen {
+  width: 100% !important;
 }
 
-.jewelry{
-	line-height: 130%;
+.mainMenu{
+  font-family: 'HelveticaNeueLight';
+  font-size: 12pt;
+  color: #000;
+  z-index: 3;
+  letter-spacing: 1px;
+  line-height: 200%;
 }
 
-.clients li:hover{
-	color: red;
-	cursor: pointer;
+.mainMenu :hover{
+  color: red;
+  cursor: pointer;
 }
 
-.clients li.selected{
-	opacity: 1;
-	cursor: pointer;
-	font-size: 9pt;
-  text-decoration:underline;
-	color: red;
+.mainMenu li.selected{
+  color: red;
+  text-decoration: underline;
 }
 
-.clients li{
-	opacity: 1;
-  transition: 0.3s all ease;
+.clients {
+  font-size: 8pt;
+  color: #000;
+  margin-top: 20vh;
+  letter-spacing: 1px;
+  width: 400px;
+  position: absolute;
+  margin-left:120px;
+  z-index: 0;
 }
 
-
-.clients li:selected{
-	opacity: 0;
-}
-
-.clients ul{
-	list-style: none;
-	line-height: 250%;
-}
-
-.copy{
-	color: #000;
-	bottom: 0px;
-	font-size: 8pt;
-	position: absolute;
-	right: 0px;
-	padding-right: 40px;
-	padding-bottom: 30px;
-	opacity: 0.8;
+.jewelry {
+  line-height: 130%;
 }
 
 .filter{
-	left: 50%;
+  padding-top: 10px;
+  z-index: 3;
 }
 
-ul{
-	margin-right: 0px;
+.filter li:hover {
+  color: red;
+  cursor: pointer;
 }
 
-.grid li{
-	overflow: hidden;
+.filter li.selected {
+  text-decoration: underline;
+  color: red;
 }
 
-.grid effect-2{
-	margin: 0;
+.filter li {
+  font-family: 'HelveticaNeue';
+  cursor: pointer;
+  font-size: 9pt;
+  opacity: 1;
+  transition: 0.2s all ease;
+  line-height: 140%;
+  margin-bottom: 10px;
 }
 
-.grid figure{
-	overflow: hidden;
-	padding: 0px;
-	margin: 0px;
+
+.filter li:selected {
+  opacity: 0;
+}
+
+.filter ul {
+  list-style: none;
+  line-height: 250%;
+  margin-left: 2vh;
+}
+
+.copy {
+  color: #000;
+  bottom: 0px;
+  font-size: 8pt;
+  position: absolute;
+  right: 0px;
+  padding-right: 40px;
+  padding-bottom: 30px;
+  opacity: 0.8;
+}
+
+.filter {
+  padding-left: 30px;
+}
+
+.item {
+  transition: '0.4s all ease';
+}
+
+ul {
+  margin-right: 0px;
+}
+
+.grid li {
+  overflow: hidden;
+}
+
+.grid effect-2 {
+  margin: 0;
+}
+
+.grid figure {
+  overflow: hidden;
+  padding: 0px;
+  margin: 0px;
 }
 
 .grid img {
-	-moz-transition: all 0.3s;
-	-webkit-transition: all 0.3s;
-	transition: all 0.3s;
-	margin: 0;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin: 0;
 }
 
 /*.grid img:hover {
-	-webkit-transform: scale(1.1);
-	transform: scale(1.1);
+-webkit-transform: scale(1.1);
+transform: scale(1.1);
 }*/
 
-.nextProject{
-	height: 20vh;
-	width: 100%;
+.nextProject {
+  height: 20vh;
+  width: 100%;
 }
 
-.nextProject p{
-	font-size: 20pt;
-	padding-top: 50px;
-	font-family: 'HelveticaNeue';
-	text-align: center;
-	color: #000;
+.nextProject p {
+  font-size: 20pt;
+  padding-top: 50px;
+  font-family: 'HelveticaNeue';
+  text-align: center;
+  color: #000;
 }
 
-.menuArea{
-	float: right;
-	padding-right: 40px;
-	margin-top: 30px;
+.menuArea {
+  float: right;
+  padding-right: 40px;
+  margin-top: 30px;
 
 }
 
-.arrowTop{
-	background-image: url(../images/arrowUp.png);
-	background-position: center;
-	background-size: contain;
-	height: 50px;
-	width: 50px;
-	right: 30px;
-	position: fixed;
-	bottom: 15px;
-	z-index: 1000;
-	text-align: center;
-	border: 1px solid #E6E6E6;
+.arrowTop {
+  background-image: url(../images/arrowUp.png);
+  background-position: center;
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  right: 30px;
+  position: fixed;
+  bottom: 15px;
+  z-index: 1000;
+  text-align: center;
+  border: 1px solid #E6E6E6;
 }
 
-.fancybox-button.fancybox-button--fullscreen{
-    display: none;
+.fancybox-button.fancybox-button--fullscreen {
+  display: none;
 }
 
 
 
 /* fine modifiche*/
 
-
-
-
 /* arrow*/
-
 
 * {
   box-sizing: border box;
@@ -323,7 +368,7 @@ ul{
 
 .btn-arrow {
   position: relative;
-    transition: 300ms ease-out;
+  transition: 300ms ease-out;
   span {
     display: inline-block;
     position: relative;
@@ -357,58 +402,152 @@ ul{
 
 /* fine arrow*/
 
-
 /* Media query*/
 
-@media only screen and (max-width : 768px) {
+@media only screen and (min-device-width : 768px)
+and (max-device-width : 1023px)  {
 
-	header{
-		top: 0px;
-		height: 90px;
-		width: 100vw;
-		position: fixed;
-		background-color: #fff;
-		z-index: 10000;
-	}
+  .menuTitle h1{
+    font-size: 130px;
+    width: 150vw;
+  }
 
-	.logo{
-		margin-top: 35px;
+}
 
-	}
 
-	.menuArea{
-		margin-top: 35px;
-	}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 667px) {
+  .menuTitle{
+    margin-top: 90px;
+  }
 
-	.containerBrands{
-		width: 100vw;
-		margin-top: 100px;
-		height: auto;
-		position: relative;
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}
+  .menuTitle h1{
+    font-size: 80px;
+    width: 190vw;
+  }
 
-	.clients{
-		text-align: center;
-		margin-top: 0px;
-		margin-left: 0px;
-	}
+  .row{
+    margin-top: 15%;
+  }
 
-	.copy{
-		display: none;
-	}
+  .row h6{
+    font-size: 11pt;
+  }
 
-	.containerGallery{
-		height: auto;
-		width: 100vw;
-		float: none;
-		padding: 0px;
-		padding-left: 4px;
-		padding-right: 4px;
-		padding-top: 0px;
-		z-index: 0;
-	}
+  .row p{
+    font-size: 10pt;
+  }
+
+  .row li{
+    font-size: 10pt;
+  }
+
+  .row h7{
+    font-size: 10pt;
+  }
+
+  .col-left {
+    width: 30%;
+  }
+
+  .col-right{
+    width: 60%;
+  }
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  header {
+    top: 0px;
+    height: 90px;
+    width: 100vw;
+    position: fixed;
+    background-color: #fff;
+    z-index: 10000;
+  }
+
+  .grid li {
+    display: block;
+    overflow: hidden;
+    float: left;
+    padding: 10px;
+    width: 50%;
+  }
+
+  .logo,
+  .close {
+    margin-top: 35px;
+
+  }
+
+  .menuArea {
+    margin-top: 35px;
+    margin-left: 15%;
+  }
+
+  .mainMenu{
+    width: 70%;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+
+  .containerBrands {
+    width: 100vw;
+    /*margin-top: 100px;*/
+    margin-top: 80px;
+    height: auto;
+    position: relative;
+    /*padding-top: 30px;*/
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+
+  .clients {
+    width: 70%;
+    position: relative;
+    margin-top: 0px;
+    margin-left: 15%;
+  }
+
+  .filter{
+    padding-top: 10px;
+    margin: 0px;
+    padding-left: 0px;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 9pt;
+
+  }
+
+  ul{
+    margin: 0px;
+  }
+
+  .mainMenu{
+    font-size: 10pt;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .copy {
+    display: none;
+  }
+
+  .containerGallery {
+    height: auto;
+    width: 100vw;
+    float: none;
+    padding: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 0px;
+    z-index: 0;
+  }
 
 }
 
@@ -417,162 +556,229 @@ ul{
 .grid li.shown,
 .no-js .grid li,
 .no-cssanimations .grid li {
-	opacity: 1;
+  opacity: 1;
 }
 
 .grid li a,
 .grid li img,
 .grid li video {
-	outline: none;
-	border: none;
-	display: block;
-	max-width: 100%;
+  outline: none;
+  border: none;
+  display: block;
+  max-width: 100%;
 }
 
 /* Effect 1: opacity */
 
 @-webkit-keyframes fadeIn {
-	0% { }
-	100% { opacity: 1; }
-}
+  0% {}
+    100% {
+      opacity: 1;
+    }
+  }
 
-@keyframes fadeIn {
-	0% { }
-	100% { opacity: 1; }
-}
+  @keyframes fadeIn {
+    0% {}
+      100% {
+        opacity: 1;
+      }
+    }
 
-/* Effect 2: Move Up */
+    /* Effect 2: Move Up */
 
+    @-webkit-keyframes moveUp {
+      0% {}
+        100% {
+          -webkit-transform: translateY(0);
+          opacity: 1;
+        }
+      }
 
-@-webkit-keyframes moveUp {
-	0% { }
-	100% { -webkit-transform: translateY(0); opacity: 1; }
-}
-
-@keyframes moveUp {
-	0% { }
-	100% { -webkit-transform: translateY(0); transform: translateY(0); opacity: 1; }
-}
-
-
-
-@-webkit-keyframes scaleUp {
-	0% { }
-	100% { -webkit-transform: scale(1); opacity: 1; }
-}
-
-@keyframes scaleUp {
-	0% { }
-	100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
-}
-
-/* Effect 4: fall perspective */
-.grid.effect-4 {
-	-webkit-perspective: 1300px;
-	perspective: 1300px;
-}
-
-.grid.effect-4 li.animate {
-	-webkit-transform-style: preserve-3d;
-	transform-style: preserve-3d;
-	-webkit-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
-	transform: translateZ(400px) translateY(300px) rotateX(-90deg);
-	-webkit-animation: fallPerspective .8s ease-in-out forwards;
-	animation: fallPerspective .8s ease-in-out forwards;
-}
-
-@-webkit-keyframes fallPerspective {
-	0% { }
-	100% { -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
-}
-
-@keyframes fallPerspective {
-	0% { }
-	100% { -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg); transform: translateZ(0px) translateY(0px) rotateX(0deg); opacity: 1; }
-}
-
-/* Effect 5: fly (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
-.grid.effect-5 {
-	-webkit-perspective: 1300px;
-	perspective: 1300px;
-}
+      @keyframes moveUp {
+        0% {}
+          100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+          }
+        }
 
 
 
-@-webkit-keyframes fly {
-	0% { }
-	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
-}
+        @-webkit-keyframes scaleUp {
+          0% {}
+            100% {
+              -webkit-transform: scale(1);
+              opacity: 1;
+            }
+          }
 
-@keyframes fly {
-	0% { }
-	100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
-}
+          @keyframes scaleUp {
+            0% {}
+              100% {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                opacity: 1;
+              }
+            }
 
-/* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
-.grid.effect-6 {
-	-webkit-perspective: 1300px;
-	perspective: 1300px;
-}
+            /* Effect 4: fall perspective */
+
+            .grid.effect-4 {
+              -webkit-perspective: 1300px;
+              perspective: 1300px;
+            }
+
+            .grid.effect-4 li.animate {
+              -webkit-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+              -webkit-transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+              transform: translateZ(400px) translateY(300px) rotateX(-90deg);
+              -webkit-animation: fallPerspective .8s ease-in-out forwards;
+              animation: fallPerspective .8s ease-in-out forwards;
+            }
+
+            @-webkit-keyframes fallPerspective {
+              0% {}
+                100% {
+                  -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+                  opacity: 1;
+                }
+              }
+
+              @keyframes fallPerspective {
+                0% {}
+                  100% {
+                    -webkit-transform: translateZ(0px) translateY(0px) rotateX(0deg);
+                    transform: translateZ(0px) translateY(0px) rotateX(0deg);
+                    opacity: 1;
+                  }
+                }
+
+                /* Effect 5: fly (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
+
+                .grid.effect-5 {
+                  -webkit-perspective: 1300px;
+                  perspective: 1300px;
+                }
 
 
 
-@-webkit-keyframes flip {
-	0% { }
-	100% { -webkit-transform: rotateX(0deg); opacity: 1; }
-}
+                @-webkit-keyframes fly {
+                  0% {}
+                    100% {
+                      -webkit-transform: rotateX(0deg);
+                      opacity: 1;
+                    }
+                  }
 
-@keyframes flip {
-	0% { }
-	100% { -webkit-transform: rotateX(0deg); transform: rotateX(0deg); opacity: 1; }
-}
+                  @keyframes fly {
+                    0% {}
+                      100% {
+                        -webkit-transform: rotateX(0deg);
+                        transform: rotateX(0deg);
+                        opacity: 1;
+                      }
+                    }
 
-/* Effect 7: helix (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
-.grid.effect-7 {
-	-webkit-perspective: 1300px;
-	perspective: 1300px;
-}
+                    /* Effect 6: flip (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
 
-
-
-@-webkit-keyframes helix {
-	0% { }
-	100% { -webkit-transform: rotateY(0deg); opacity: 1; }
-}
-
-@keyframes helix {
-	0% { }
-	100% { -webkit-transform: rotateY(0deg); transform: rotateY(0deg); opacity: 1; }
-}
-
-/* Effect 8:  */
-.grid.effect-8 {
-	-webkit-perspective: 1300px;
-	perspective: 1300px;
-}
+                    .grid.effect-6 {
+                      -webkit-perspective: 1300px;
+                      perspective: 1300px;
+                    }
 
 
 
-@-webkit-keyframes popUp {
-	0% { }
-	70% { -webkit-transform: scale(1.1); opacity: .8; -webkit-animation-timing-function: ease-out; }
-	100% { -webkit-transform: scale(1); opacity: 1; }
-}
+                    @-webkit-keyframes flip {
+                      0% {}
+                        100% {
+                          -webkit-transform: rotateX(0deg);
+                          opacity: 1;
+                        }
+                      }
 
-@keyframes popUp {
-	0% { }
-	70% { -webkit-transform: scale(1.1); transform: scale(1.1); opacity: .8; -webkit-animation-timing-function: ease-out; animation-timing-function: ease-out; }
-	100% { -webkit-transform: scale(1); transform: scale(1); opacity: 1; }
-}
+                      @keyframes flip {
+                        0% {}
+                          100% {
+                            -webkit-transform: rotateX(0deg);
+                            transform: rotateX(0deg);
+                            opacity: 1;
+                          }
+                        }
 
-@media screen and (max-width: 900px) {
-	.grid li {
-		width: 50%;
-	}
-}
+                        /* Effect 7: helix (based on http://lab.hakim.se/scroll-effects/ by @hakimel) */
 
-@media screen and (max-width: 400px) {
-	.grid li {
-		width: 100%;
-	}
-}
+                        .grid.effect-7 {
+                          -webkit-perspective: 1300px;
+                          perspective: 1300px;
+                        }
+
+
+
+                        @-webkit-keyframes helix {
+                          0% {}
+                            100% {
+                              -webkit-transform: rotateY(0deg);
+                              opacity: 1;
+                            }
+                          }
+
+                          @keyframes helix {
+                            0% {}
+                              100% {
+                                -webkit-transform: rotateY(0deg);
+                                transform: rotateY(0deg);
+                                opacity: 1;
+                              }
+                            }
+
+                            /* Effect 8:  */
+
+                            .grid.effect-8 {
+                              -webkit-perspective: 1300px;
+                              perspective: 1300px;
+                            }
+
+
+
+                            @-webkit-keyframes popUp {
+                              0% {}
+                                70% {
+                                  -webkit-transform: scale(1.1);
+                                  opacity: .8;
+                                  -webkit-animation-timing-function: ease-out;
+                                }
+                                100% {
+                                  -webkit-transform: scale(1);
+                                  opacity: 1;
+                                }
+                              }
+
+                              @keyframes popUp {
+                                0% {}
+                                  70% {
+                                    -webkit-transform: scale(1.1);
+                                    transform: scale(1.1);
+                                    opacity: .8;
+                                    -webkit-animation-timing-function: ease-out;
+                                    animation-timing-function: ease-out;
+                                  }
+                                  100% {
+                                    -webkit-transform: scale(1);
+                                    transform: scale(1);
+                                    opacity: 1;
+                                  }
+                                }
+
+                                @media screen and (max-width: 900px) {
+                                  .grid li {
+                                    width: 50%;
+                                  }
+                                }
+
+                                @media screen and (max-width: 400px) {
+                                  .grid li {
+                                    width: 100%;
+                                  }
+                                }

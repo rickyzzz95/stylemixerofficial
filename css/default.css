@@ -15,6 +15,100 @@
     src: url(../fonts/HelveticaNeueMedium.ttf);
 }
 
+@font-face {
+    font-family: HelveticaNeueRegular;
+    src: url(../fonts/HelveticaNeue.ttf);
+}
+
+@font-face {
+    font-family: HelveticaNeueExtraLight;
+    src: url(../fonts/HelveticaNeue-UltraLight.ttf);
+}
+@font-face {
+    font-family: ATSackers;
+    src: url(../fonts/sackersgothicstd-heavy.otf);
+}
+
+body{
+    font-family: "HelveticaNeue";
+}
+
+.container-fluid{
+    /*padding-right:15px;
+    padding-left:15px;*/
+    margin-right:auto;
+    margin-left:auto;
+    overflow: auto;
+    overflow-x: hidden;
+    display: none;
+}
+
+row{
+  padding-left: 15px;
+  padding-right: 15PX;
+}
+.menuTitle{
+    color: #000;
+    font-family: 'HelveticaNeueExtraLight';
+    margin-top: 15%;
+    margin-left: 5%;
+    position: relative;
+    opacity: 0.99;
+}
+.menuTitle h1{
+    font-size: 240px;
+    width: 150vw;
+}
+.col-right h5{
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 1%;
+    color: #000;
+    font-family: 'HelveticaNeueExtraLight';
+}
+.col-left{
+    width: 38%;
+    margin-left: 5%;
+    display: inline-block;
+}
+.col-right{
+    width: 50%;
+    display: inline-block;
+}
+.row{
+    margin-top: 7%;
+}
+.menuBlockTitle{
+    vertical-align: top;
+    font-family: "HelveticaNeue";
+    color: #000;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+.menuText{
+    color: #000;
+    font-family: "HelveticaNeue";
+    font-size: 15px;
+    line-height: 24px;
+}
+#last{
+    margin-bottom: 2%;
+    font-size: 14px;
+/*    text-align: right;*/
+}
+.close{
+    color: #000;
+    font-size: 16px;
+    text-align: right;
+    margin-top: 40px;
+    margin-right: 50px;
+    transition: 0.2s all ease;
+}
+.close span:hover{
+    color: #909090;
+    cursor: pointer;
+}
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 body, html { font-size: 100%; padding: 0; margin: 0;}
 
@@ -23,7 +117,6 @@ body, html { font-size: 100%; padding: 0; margin: 0;}
 .clearfix:after { clear: both; }
 
 body {
-	font-family: 'HelveticaNeue';
 	color: #fff;
 	background: #fff;
 }
@@ -38,6 +131,17 @@ a:active {
 	color: #333;
 }
 
+#splashPage{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 9999;
+    top:0;left:0;
+}
+#splashPage object{
+    height: 100%;
+    width: 100%;
+}
 /* Header Style */
 .container > header {
 	margin: 0 auto;
